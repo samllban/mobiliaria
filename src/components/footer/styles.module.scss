@@ -1,0 +1,266 @@
+.container {
+  background: #fff;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-inline: 8vw;
+  padding-top: 60px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  min-height: 350px;
+  padding-bottom: 50px;
+}
+
+.leftside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 40px;
+  img {
+    width: 150px;
+  }
+  p {
+    color: #2d2c2b;
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+
+.letters {
+  display: flex;
+  justify-content: space-between;
+  img {
+    width: 35px;
+    cursor: pointer;
+  }
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box,
+.box2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  h5 {
+    color: #2d2c2b;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  h4 {
+    color: #2d2c2b;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  p {
+    color: #767574;
+    font-weight: 600;
+    font-size: 17px;
+  }
+}
+
+.box2 {
+  h4 {
+    text-decoration: underline;
+  }
+}
+
+.rightside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rightTop {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    color: #2d2c2b;
+    font-weight: 600;
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+  .inputContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 8px;
+
+    input {
+      border: none;
+      flex: 1;
+      padding: 8px;
+      font-size: 14px;
+      background: transparent;
+    }
+
+    img {
+      width: 20px;
+      margin-left: 10px;
+    }
+  }
+
+  .privacy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #767574;
+    padding-top: 15px;
+
+    img {
+      width: 20px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.rightBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    width: 120px;
+    height: auto;
+    filter: brightness(0) invert(0);
+    cursor: pointer;
+  }
+  .image {
+    width: 85px;
+    filter: none;
+  }
+}
+
+.bottom {
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 20px;
+}
+
+.leftBottom {
+  p {
+    color: #767574;
+    font-weight: 600;
+    font-size: 18px;
+    span {
+      padding-left: 5px;
+      color: #2d2c2b;
+      text-decoration: underline;
+    }
+  }
+}
+
+.rightBottom {
+  display: flex;
+  gap: 30px;
+  p {
+    color: #767574;
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding-inline: 4vw;
+    padding-top: 30px; /* Ajuste de padding superior */
+  }
+
+  .top {
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center;
+    gap: 20px; /* Espaçamento entre os blocos */
+  }
+
+  .leftside {
+    padding-right: 0;
+    align-items: center;
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .letters {
+    justify-content: center;
+    gap: 15px;
+
+    img {
+      width: 30px;
+      margin-top: 20px;
+    }
+  }
+
+  .middle,
+  .rightside {
+    align-items: center;
+    text-align: center;
+  }
+
+  .box2 {
+    margin-top: 30px;
+  }
+
+  .box,
+  .box2 {
+    align-items: center;
+    gap: 25px;
+
+    h5,
+    h4 {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .rightBottom {
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Reduzi o espaçamento entre os elementos */
+
+    img {
+      width: 100px;
+      margin-top: 20px;
+    }
+  }
+
+  .rightside .rightTop {
+    margin-top: 35px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px; /* Mantém o espaçamento no rodapé */
+  }
+
+  .leftBottom,
+  .rightBottom {
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .inputContainer {
+    width: 100%;
+    max-width: 100%; /* Ajusta a largura total do container de input */
+  }
+}

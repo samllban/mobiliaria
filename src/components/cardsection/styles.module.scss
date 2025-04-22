@@ -1,0 +1,138 @@
+.container {
+  width: 100%;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  position: relative;
+}
+
+.content {
+  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 1440px;
+  display: flex;
+  padding-inline: 6vw;
+  width: 100%;
+
+  .background {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.leftside,
+.rightside {
+  width: 50%;
+  z-index: 2;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.form {
+  max-width: 449px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #6d4c41;
+  background-color: #6d4c42;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+
+  button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: none;
+    cursor: pointer;
+    padding-block: 10px;
+    border-radius: 10px;
+    width: 50%;
+    color: #fff;
+    background-color: #6d4c41;
+  }
+}
+
+.inputWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  input {
+    outline: none;
+    border: 1px solid #6d4c41;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background: #6d4c42;
+  }
+
+  p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  textarea {
+    height: 15vh;
+    outline: none;
+    border: 1px solid #6d4c41;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background: #fff;
+  }
+}
+
+.leftside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightside {
+  display: flex;
+  padding-top: 2rem;
+  padding-left: 70px;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 52px;
+    color: #6d4c41;
+  }
+
+  p {
+    color: #6d4c41;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.rowWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  p {
+    font-weight: bold;
+  }
+}

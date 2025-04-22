@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  background-color: #f2f2f2;
+}
+
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  --primary-color: #1f2a44;
+  --secondary-color: #2c3e5e;
+  --accent-color: #d4af37;
+  --bg-light: #f2f2f2;
+  --text-light: #ffffff;
+  --text-dark: #1f2a44;
+
+  --foreground-rgb: 31, 42, 68;
+  --background-start-rgb: 242, 242, 242;
+  --background-end-rgb: 255, 255, 255;
+
+  --primary-glow: radial-gradient(rgba(31, 42, 68, 0.3), rgba(31, 42, 68, 0));
+  --secondary-glow: radial-gradient(rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0));
+
+  --tile-start-rgb: 255, 255, 255;
+  --tile-end-rgb: 240, 240, 240;
+  --tile-border: conic-gradient(
+    #1f2a4480,
+    #1f2a4440,
+    #1f2a4430,
+    #1f2a4420,
+    #1f2a4410,
+    #1f2a4410,
+    #1f2a4480
+  );
+
+  --callout-rgb: 245, 245, 245;
+  --callout-border-rgb: 200, 200, 200;
+  --card-rgb: 255, 255, 255;
+  --card-border-rgb: 220, 220, 220;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 15, 20, 35;
+    --background-end-rgb: 15, 20, 35;
+
+    --primary-glow: radial-gradient(rgba(212, 175, 55, 0.3), rgba(31, 42, 68, 0));
+    --secondary-glow: linear-gradient(
+      to bottom right,
+      rgba(31, 42, 68, 0),
+      rgba(31, 42, 68, 0),
+      rgba(212, 175, 55, 0.3)
+    );
+
+    --tile-start-rgb: 25, 32, 50;
+    --tile-end-rgb: 15, 20, 35;
+    --tile-border: conic-gradient(
+      #ffffff80,
+      #ffffff40,
+      #ffffff30,
+      #ffffff20,
+      #ffffff10,
+      #ffffff10,
+      #ffffff80
+    );
+
+    --callout-rgb: 30, 30, 30;
+    --callout-border-rgb: 100, 100, 100;
+    --card-rgb: 45, 45, 45;
+    --card-border-rgb: 120, 120, 120;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.custom-swiper {
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 108%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .swiper-button-prev {
+    background-image: url("/arrowS.svg");
+    transform: rotate(180deg);
+  }
+
+  .swiper-button-next {
+    background-image: url("/arrowS.svg");
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    content: "";
+  }
+}

@@ -1,0 +1,9 @@
+.progressBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 0;
+  background-color: #ff8c00; /* Cor da barra de progresso */
+  z-index: 100;
+}

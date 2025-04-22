@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url("/lazarosdisney.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 8vw;
+  justify-content: center;
+  gap: 4vw;
+}
+
+.title {
+  width: 77%;
+  h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: "Space Grotesk", sans-serif;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  img {
+    filter: brightness(0) invert(1);
+    width: 200px;
+  }
+  hr {
+    width: 200px;
+    height: 1px;
+    background-color: #a7a7a7;
+    border: none;
+  }
+  p {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    min-height: 100vh;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("/lazarosdisney.jpg") no-repeat center center;
+    background-size: cover; /* Garante que a imagem preencha o fundo */
+    background-attachment: scroll; /* Altere de fixed para scroll em mobile */
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 4vw; /* Reduz o padding lateral */
+    gap: 8vw; /* Aumenta o gap entre os elementos */
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+  }
+
+  .title {
+    width: 100%; /* Título ocupa toda a largura */
+    h1 {
+      font-size: 30px; /* Reduz o tamanho do título */
+      text-align: center; /* Centraliza o texto do título */
+    }
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos no eixo horizontal */
+    gap: 10px; /* Reduz o espaço entre os elementos */
+
+    img {
+      width: 150px; /* Reduz o tamanho da imagem */
+    }
+
+    hr {
+      width: 150px; /* Ajusta o tamanho da linha para corresponder à largura da imagem */
+    }
+
+    p {
+      font-size: 1rem; /* Reduz o tamanho do texto */
+      text-align: center; /* Centraliza o texto */
+    }
+  }
+}
